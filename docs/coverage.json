@@ -1,14 +1,12 @@
 {
-  "coverage": "0%",
-  "expectCount": 1,
-  "actualCount": 0,
+  "coverage": "100%",
+  "expectCount": 8,
+  "actualCount": 8,
   "files": {
     "src/ObjUtil.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        3
-      ]
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
     }
   }
 }

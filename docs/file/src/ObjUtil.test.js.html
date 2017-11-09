@@ -32,7 +32,7 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-registerImmutable">registerImmutable</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/ObjUtil.js~ObjUtil.html">ObjUtil</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -42,8 +42,29 @@
 
 import ObjUtil from &apos;./ObjUtil&apos;;
 
-test(&apos;ObjUtil&apos;, t =&gt; {
-    t.comment(&apos;no tests implemented&apos;);
+test(&apos;ObjUtil.diff&apos;, t =&gt; {
+    t.equals(ObjUtil.diff({ foo: &apos;a&apos; }, { foo: &apos;a&apos; }), null, &apos;Returns null when values are equal&apos;);
+    t.deepEquals(ObjUtil.diff({ foo: &apos;a&apos; }, { foo: &apos;b&apos; }), [&apos;foo&apos;], &apos;Returns single diff key&apos;);
+    t.deepEquals(
+        ObjUtil.diff({ foo: &apos;a&apos;, bar: &apos;b&apos; }, { foo: &apos;b&apos;, bar: &apos;c&apos; }),
+        [&apos;foo&apos;, &apos;bar&apos;],
+        &apos;Returns multiple diff keys&apos;
+    );
+    t.deepEquals(
+        ObjUtil.diff({ foo: &apos;a&apos;, bar: &apos;b&apos; }, { foo: &apos;b&apos;, bar: &apos;b&apos; }),
+        [&apos;foo&apos;],
+        &apos;Does not return unchanged keys&apos;
+    );
+    t.deepEquals(
+        ObjUtil.diff({ foo: &apos;a&apos;, bar: &apos;b&apos; }, { foo: &apos;b&apos;, bar: &apos;c&apos; }, [&apos;foo&apos;]),
+        [&apos;foo&apos;],
+        &apos;Returns diff of only the specified keys&apos;
+    );
+    t.equals(
+        ObjUtil.diff({ foo: &apos;a&apos;, bar: &apos;b&apos; }, { foo: &apos;a&apos;, bar: &apos;c&apos; }, [&apos;foo&apos;]),
+        null,
+        &apos;Returns null if keys were specified but have no diff&apos;
+    );
     t.end();
 });
 </code></pre>

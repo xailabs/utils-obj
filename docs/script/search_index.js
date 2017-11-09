@@ -1,9 +1,9 @@
 window.esdocSearchIndex = [
   [
-    "@xailabs/utils-obj/src/objutil.js~registerimmutable",
-    "function/index.html#static-function-registerImmutable",
-    "<span>registerImmutable</span> <span class=\"search-result-import-path\">@xailabs/utils-obj/src/ObjUtil.js</span>",
-    "function"
+    "@xailabs/utils-obj/src/objutil.js~objutil",
+    "class/src/ObjUtil.js~ObjUtil.html",
+    "<span>ObjUtil</span> <span class=\"search-result-import-path\">@xailabs/utils-obj/src/ObjUtil.js</span>",
+    "class"
   ],
   [
     "builtinexternal/ecmascriptexternal.js~array",
@@ -340,6 +340,48 @@ window.esdocSearchIndex = [
     "file/src/ObjUtil.js.html",
     "src/ObjUtil.js",
     "file"
+  ],
+  [
+    "src/objutil.js~objutil.diff",
+    "class/src/ObjUtil.js~ObjUtil.html#static-method-diff",
+    "src/ObjUtil.js~ObjUtil.diff",
+    "method"
+  ],
+  [
+    "src/objutil.js~objutil.keys",
+    "class/src/ObjUtil.js~ObjUtil.html#static-method-keys",
+    "src/ObjUtil.js~ObjUtil.keys",
+    "method"
+  ],
+  [
+    "src/objutil.js~objutil.pick",
+    "class/src/ObjUtil.js~ObjUtil.html#static-method-pick",
+    "src/ObjUtil.js~ObjUtil.pick",
+    "method"
+  ],
+  [
+    "src/objutil.js~objutil.pojo",
+    "class/src/ObjUtil.js~ObjUtil.html#static-method-pojo",
+    "src/ObjUtil.js~ObjUtil.pojo",
+    "method"
+  ],
+  [
+    "src/objutil.js~objutil.registerimmutable",
+    "class/src/ObjUtil.js~ObjUtil.html#static-method-registerImmutable",
+    "src/ObjUtil.js~ObjUtil.registerImmutable",
+    "method"
+  ],
+  [
+    "src/objutil.js~objutil.rest",
+    "class/src/ObjUtil.js~ObjUtil.html#static-method-rest",
+    "src/ObjUtil.js~ObjUtil.rest",
+    "method"
+  ],
+  [
+    "src/objutil.js~objutil.values",
+    "class/src/ObjUtil.js~ObjUtil.html#static-method-values",
+    "src/ObjUtil.js~ObjUtil.values",
+    "method"
   ],
   [
     "src/objutil.test.js",

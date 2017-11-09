@@ -1,11 +1,11 @@
 {
   "name": "@xailabs/utils-obj",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "lib/ObjUtil.js",
   "scripts": {
     "test": "babel-tape-runner ./tests.js | faucet",
-    "tape": "nodemon -w src -w test -q -x \"yarn test\"",
+    "test:watch": "nodemon -w src -w test -q -x \"yarn test\"",
     "docs": "esdoc",
     "build": "rm -rf lib/* && babel src --out-dir lib --ignore **/*.test.js",
     "prepublishOnly": "yarn test && yarn build"
