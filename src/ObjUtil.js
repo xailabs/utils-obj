@@ -47,8 +47,21 @@ export default class ObjUtil {
             }
         };
         if (!names) {
-            const aKeys = Object.keys(a && a.toJS ? a.toJS() : a || {});
-            const bKeys = Object.keys(b && b.toJS ? b.toJS() : b || {});
+            let aKeys;
+            if (a) {
+                aKeys = Object.keys(a.toJS ? a.toJS() : a);
+            }
+            else {
+                aKeys = [];
+            }
+     
+            let bKeys;
+            if (b) {
+                bKeys = Object.keys(b.toJS ? b.toJS() : b);
+            }
+            else {
+                bKeys = [];
+            }
             names = aKeys.concat(bKeys.filter(key => aKeys.indexOf(key) === -1));
         }
         for (let name of names) {
