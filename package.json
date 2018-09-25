@@ -10,6 +10,7 @@
     "build": "rm -rf lib/* && babel src --out-dir lib --ignore **/*.test.js",
     "prepublishOnly": "yarn test && yarn build"
   },
+  "repository": "git@github.com:xailabs/utils-obj.git",
   "keywords": [],
   "author": "Jovica Aleksic <jovica.aleksic@xailabs.de>",
   "license": "ISC",
