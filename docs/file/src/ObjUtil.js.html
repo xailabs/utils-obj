@@ -19,7 +19,7 @@
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
-  
+  <a data-ice="repoURL" href="https://github.com/xailabs/utils-obj" class="repo-url-github">Repository</a>
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -43,6 +43,8 @@
 // taken from NISV client project
 // 
 /**
+ * A class with static util methods for working with objects.
+ *
  * @author jovica.aleksic &lt;jovica.aleksic@xailabs.de&gt;
  */
 export default class ObjUtil {
@@ -85,8 +87,21 @@ export default class ObjUtil {
             }
         };
         if (!names) {
-            const aKeys = Object.keys(a &amp;&amp; a.toJS ? a.toJS() : a || {});
-            const bKeys = Object.keys(b &amp;&amp; b.toJS ? b.toJS() : b || {});
+            let aKeys;
+            if (a) {
+                aKeys = Object.keys(a.toJS ? a.toJS() : a);
+            }
+            else {
+                aKeys = [];
+            }
+     
+            let bKeys;
+            if (b) {
+                bKeys = Object.keys(b.toJS ? b.toJS() : b);
+            }
+            else {
+                bKeys = [];
+            }
             names = aKeys.concat(bKeys.filter(key =&gt; aKeys.indexOf(key) === -1));
         }
         for (let name of names) {
